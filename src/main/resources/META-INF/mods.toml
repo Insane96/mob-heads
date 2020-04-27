@@ -1,0 +1,26 @@
+modLoader="javafml"
+loaderVersion="[31,)"
+issueTrackerURL="https://github.com/Insane96/MobHeads/issues"
+[[mods]]
+modId="mobheads"
+version="${file.jarVersion}"
+displayName="Mob Heads"
+displayURL="https://www.curseforge.com/minecraft/mc-mods/mob-heads"
+# logoFile="examplemod.png"
+credits="Thanks to the Forge team for all the work on the rewrite"
+authors="Insane96"
+description='''
+This simple mod makes all mobs able to drop heads. Datapack driven!
+'''
+[[dependencies.mobheads]]
+    modId="forge"
+    mandatory=true
+    versionRange="[31,)"
+    ordering="NONE"
+    side="BOTH"
+[[dependencies.mobheads]]
+    modId="minecraft"
+    mandatory=true
+    versionRange="[1.15.2]"
+    ordering="NONE"
+    side="BOTH"

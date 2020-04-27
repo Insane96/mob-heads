@@ -1,0 +1,9 @@
+{
+    "mob_id": "minecraft:zombie_villager",
+	"nbt": "{VillagerData:{profession:\"minecraft:cleric\"}}",
+    "head": "eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvNTY4MDAxZjRmN2QwNzFiMjU0YmU3ZjMxMjA1MzYxYWU0ZmFiNjNjZTM4ODY0NzFhYTFjNzRlNjVmNjVlMWU2OSJ9fX0=",
+    "uuid": "52164990-3213-4ec3-9736-4dadb3afd100",
+    "head_name": "Zombie Cleric Head",
+    "chance": 0.07,
+    "looting_chance": 0.01
+}

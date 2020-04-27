@@ -1,0 +1,9 @@
+{
+    "mob_id": "minecraft:villager",
+	"nbt": "{VillagerData:{profession:\"minecraft:weaponsmith\"}}",
+    "head": "eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvNWU0MDliOTU4YmM0ZmUwNDVlOTVkMzI1ZTZlOTdhNTMzMTM3ZTMzZmVjNzA0MmFjMDI3YjMwYmI2OTNhOWQ0MiJ9fX0=",
+    "uuid": "a2df5871-e4f7-4b48-978c-aa27c66f9f82",
+    "head_name": "Weaponsmith Head",
+    "chance": 0.07,
+    "looting_chance": 0.01
+}

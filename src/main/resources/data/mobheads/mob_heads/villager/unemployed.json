@@ -1,0 +1,9 @@
+{
+    "mob_id": "minecraft:villager",
+	"nbt": "{VillagerData:{profession:\"minecraft:none\"}}",
+    "head": "eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvZDE0YmZmMWEzOGM5MTU0ZTVlYzg0Y2U1Y2YwMGM1ODc2OGUwNjhlYjQyYjJkODlhNmJiZDI5Nzg3NTkwMTA2YiJ9fX0=",
+    "uuid": "c07f2f88-1bf5-4384-b88a-cb179bf53fbc",
+    "head_name": "Villager Head",
+    "chance": 0.07,
+    "looting_chance": 0.01
+}

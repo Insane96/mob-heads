@@ -1,0 +1,9 @@
+{
+    "mob_id": "minecraft:sheep",
+	"nbt": "{Color:9b}",
+    "head": " eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvNDZmNmM3ZTdmZDUxNGNlMGFjYzY4NTkzMjI5ZTQwZmNjNDM1MmI4NDE2NDZlNGYwZWJjY2NiMGNlMjNkMTYifX19",
+    "uuid": "1fb8f6a4-d2de-4e4b-b34b-64065eae27a7",
+    "head_name": "Cyan Sheep Head",
+    "chance": 0.02,
+    "looting_chance": 0.01
+}

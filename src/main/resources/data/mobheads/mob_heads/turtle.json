@@ -1,0 +1,8 @@
+{
+    "mob_id": "minecraft:turtle",
+    "head": " eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvMGE0MDUwZTdhYWNjNDUzOTIwMjY1OGZkYzMzOWRkMTgyZDdlMzIyZjlmYmNjNGQ1Zjk5YjU3MThhIn19fQ==",
+    "uuid": "13425a4a-4d48-481a-bf7d-8527adbee7c8",
+    "head_name": "Turtle Head",
+    "chance": 0.02,
+    "looting_chance": 0.01
+}

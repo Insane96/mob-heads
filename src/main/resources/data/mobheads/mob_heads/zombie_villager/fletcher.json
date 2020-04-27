@@ -1,0 +1,9 @@
+{
+    "mob_id": "minecraft:zombie_villager",
+	"nbt": "{VillagerData:{profession:\"minecraft:fletcher\"}}",
+    "head": "eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvNjk1NzIyZmM4Zjg3MjM3MDJjMzI1Y2FmNGI2YWY2NTFmOWRjYmMzMTA4NmE3MjcwYTI1YTNkM2MwZTE2MmMwMSJ9fX0=",
+    "uuid": "634ccae2-c119-4aa6-a872-ab6f6592a1e2",
+    "head_name": "Zombie Fletcher Head",
+    "chance": 0.07,
+    "looting_chance": 0.01
+}

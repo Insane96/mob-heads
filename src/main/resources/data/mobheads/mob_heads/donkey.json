@@ -1,0 +1,8 @@
+{
+    "mob_id": "minecraft:donkey",
+    "head": "eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvNjNhOTc2YzA0N2Y0MTJlYmM1Y2IxOTcxMzFlYmVmMzBjMDA0YzBmYWY0OWQ4ZGQ0MTA1ZmNhMTIwN2VkYWZmMyJ9fX0=",
+    "uuid": "57d869b0-7323-40d3-84aa-adf4ef50ef0e",
+    "head_name": "Donkey Head",
+    "chance": 0.07,
+    "looting_chance": 0.01
+}

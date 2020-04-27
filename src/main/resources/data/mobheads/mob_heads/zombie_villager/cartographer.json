@@ -1,0 +1,9 @@
+{
+    "mob_id": "minecraft:zombie_villager",
+	"nbt": "{VillagerData:{profession:\"minecraft:cartographer\"}}",
+    "head": "eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvZDhkMDBjMTViOGZlYmE4N2IxNDA0NjYzYmRiMTVhZTc1ZTQwZTQ5ZWQxNDA2MzVhYzgwZjQzOGI1MmMyMjFlYyJ9fX0=",
+    "uuid": "15a4cc3e-fbd3-4971-8e43-72e7b21f1b04",
+    "head_name": "Zombie Cartographer Head",
+    "chance": 0.07,
+    "looting_chance": 0.01
+}

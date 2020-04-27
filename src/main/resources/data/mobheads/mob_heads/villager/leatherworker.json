@@ -1,0 +1,9 @@
+{
+    "mob_id": "minecraft:villager",
+	"nbt": "{VillagerData:{profession:\"minecraft:leatherworker\"}}",
+    "head": "eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvZjc2Y2Y4YjczNzhlODg5Mzk1ZDUzOGU2MzU0YTE3YTNkZTZiMjk0YmI2YmY4ZGI5YzcwMTk1MWM2OGQzYzBlNiJ9fX0=",
+    "uuid": "526287cb-17e6-4041-aae5-5b1e62cf9b8d",
+    "head_name": "Leatherworker Head",
+    "chance": 0.07,
+    "looting_chance": 0.01
+}

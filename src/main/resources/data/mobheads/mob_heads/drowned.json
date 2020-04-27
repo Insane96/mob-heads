@@ -1,0 +1,8 @@
+{
+    "mob_id": "minecraft:drowned",
+    "head": " eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvYzg0ZGY3OWM0OTEwNGIxOThjZGFkNmQ5OWZkMGQwYmNmMTUzMWM5MmQ0YWI2MjY5ZTQwYjdkM2NiYmI4ZTk4YyJ9fX0=",
+    "uuid": "31775be3-068d-4824-be2b-1061f798c661",
+    "head_name": "Drowned Head",
+    "chance": 0.02,
+    "looting_chance": 0.01
+}

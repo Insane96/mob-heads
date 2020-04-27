@@ -1,0 +1,9 @@
+{
+    "mob_id": "minecraft:horse",
+    "nbt": "{color:\"creamy\"}",
+    "head": "eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvNjI4ZDFhYjRiZTFlMjhiN2I0NjFmZGVhNDYzODFhYzM2M2E3ZTVjMzU5MWM5ZTVkMjY4M2ZiZTFlYzlmY2QzIn19fQ==",
+    "uuid": "2f7cacef-ed69-4091-ac2f-3f208272b054",
+    "head_name": "Creamy Horse Head",
+    "chance": 0.07,
+    "looting_chance": 0.01
+}

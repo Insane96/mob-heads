@@ -1,0 +1,9 @@
+{
+    "mob_id": "minecraft:sheep",
+	"nbt": "{Color:15b}",
+    "head": " eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvMzI2NTIwODNmMjhlZDFiNjFmOWI5NjVkZjFhYmYwMTBmMjM0NjgxYzIxNDM1OTUxYzY3ZDg4MzY0NzQ5ODIyIn19fQ==",
+    "uuid": "7b178e16-5a63-4128-b42f-3e491c5eb07c",
+    "head_name": "Black Sheep Head",
+    "chance": 0.02,
+    "looting_chance": 0.01
+}

@@ -1,0 +1,9 @@
+{
+	"mob_id": "minecraft:creeper",
+	"nbt": "{powered: 1b}",
+	"head": "eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvOTg2MjViYzk5NzEyNTZhYjNiMWRlNWU3YjMzMzhkNWRlYzI2ODNiZmVmMDMxMDc5MzQ5NWQyN2FhMzhhYTQwOCJ9fX0=",
+	"uuid": "67660f38-cad9-4075-bf8e-7ff242373e53",
+	"head_name": "Creeper Plush",
+	"chance": 0.005,
+	"looting_chance": 0.005
+}

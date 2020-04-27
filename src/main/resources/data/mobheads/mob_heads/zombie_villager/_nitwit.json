@@ -1,0 +1,9 @@
+{
+    "mob_id": "minecraft:zombie_villager",
+	"nbt": "{VillagerData:{profession:\"minecraft:nitwit\"}}",
+    "head": "eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvMzdlODM4Y2NjMjY3NzZhMjE3YzY3ODM4NmY2YTY1NzkxZmU4Y2RhYjhjZTljYTRhYzZiMjgzOTdhNGQ4MWMyMiJ9fX0=",
+    "uuid": "54a989c6-0c2c-4210-8d32-96281629411d",
+    "head_name": "Zombie Nitwit Head",
+    "chance": 0.07,
+    "looting_chance": 0.01
+}
