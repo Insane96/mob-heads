@@ -1,8 +1,8 @@
 package insane96mcp.mobheads.event;
 
+import insane96mcp.mobheads.MobHeads;
 import insane96mcp.mobheads.data.HeadReloadListener;
 import insane96mcp.mobheads.data.MobHead;
-import insane96mcp.mobheads.MobHeads;
 import net.minecraft.entity.Entity;
 import net.minecraft.entity.LivingEntity;
 import net.minecraft.entity.item.ItemEntity;
@@ -30,7 +30,7 @@ public class MobDrop {
 
 		if (trueSource instanceof CreeperEntity){
 			CreeperEntity creeper = (CreeperEntity) trueSource;
-			if (!creeper.ableToCauseSkullDrop())
+			if (!creeper.ableToCauseSkullDrop()/* && !(event.getEntityLiving() instanceof ZombieEntity)*/)
 				return;
 		}
 
@@ -55,8 +55,11 @@ public class MobDrop {
 				continue;
 
 			float chance = (float) (head.chance + (head.lootingChance * event.getLootingLevel()));
-			if (trueSource instanceof CreeperEntity)
+			if (trueSource instanceof CreeperEntity) {
 				chance = 1f;
+				CreeperEntity creeper = (CreeperEntity) trueSource;
+				creeper.incrementDroppedSkulls();
+			}
 			if (rand.nextFloat() > chance)
 				continue;
 			ItemStack headStack = head.getStack();
