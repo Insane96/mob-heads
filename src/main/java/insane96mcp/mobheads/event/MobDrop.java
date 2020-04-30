@@ -3,6 +3,7 @@ package insane96mcp.mobheads.event;
 import insane96mcp.mobheads.MobHeads;
 import insane96mcp.mobheads.data.HeadReloadListener;
 import insane96mcp.mobheads.data.MobHead;
+import insane96mcp.mobheads.setup.Utils;
 import net.minecraft.entity.Entity;
 import net.minecraft.entity.LivingEntity;
 import net.minecraft.entity.item.ItemEntity;
@@ -30,7 +31,7 @@ public class MobDrop {
 
 		if (trueSource instanceof CreeperEntity){
 			CreeperEntity creeper = (CreeperEntity) trueSource;
-			if (!creeper.ableToCauseSkullDrop()/* && !(event.getEntityLiving() instanceof ZombieEntity)*/)
+			if (!Utils.canCauseSkullDrop(creeper, event.getEntityLiving()))
 				return;
 		}
 
