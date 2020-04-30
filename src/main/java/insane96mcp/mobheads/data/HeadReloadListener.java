@@ -7,17 +7,11 @@ import com.google.gson.GsonBuilder;
 import com.google.gson.JsonObject;
 import com.google.gson.JsonParseException;
 import insane96mcp.mobheads.MobHeads;
-import insane96mcp.mobheads.setup.ModTabs;
 import net.minecraft.client.resources.JsonReloadListener;
-import net.minecraft.item.ItemStack;
-import net.minecraft.item.Items;
 import net.minecraft.profiler.IProfiler;
 import net.minecraft.resources.IResourceManager;
-import net.minecraft.util.NonNullList;
 import net.minecraft.util.ResourceLocation;
 
-import java.util.ArrayList;
-import java.util.List;
 import java.util.Map;
 import java.util.Set;
 
@@ -59,10 +53,9 @@ public class HeadReloadListener extends JsonReloadListener {
 				MobHeads.LOGGER.warn("Error: ", e);
 			}
 		}
-		ModTabs.HEADS.fill(NonNullList.create());
+
+		//ModTabs.HEADS.fill(NonNullList.create());
+
 		MobHeads.LOGGER.info("{} Heads loaded!", mobHeads.size());
-		/*mobHeads.forEach((k, v) -> {
-			MobHeads.LOGGER.info("{} {}", k, v);
-		});*/
 	}
 }

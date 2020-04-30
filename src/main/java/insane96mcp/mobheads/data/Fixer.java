@@ -21,19 +21,20 @@ public class Fixer {
 
 		String color = "";
 
-		if (horse.getHorseTexture().contains("hwh"))
+		int horseVariant = horse.getHorseVariant();
+		if (horseVariant % 256 == 0)
 			color = "white";
-		else if (horse.getHorseTexture().contains("hcr"))
+		else if (horseVariant % 256 == 1)
 			color = "creamy";
-		else if (horse.getHorseTexture().contains("hch"))
+		else if (horseVariant % 256 == 2)
 			color = "chestnut";
-		else if (horse.getHorseTexture().contains("hbr"))
+		else if (horseVariant % 256 == 3)
 			color = "brown";
-		else if (horse.getHorseTexture().contains("hbl"))
+		else if (horseVariant % 256 == 4)
 			color = "black";
-		else if (horse.getHorseTexture().contains("hgr"))
+		else if (horseVariant % 256 == 5)
 			color = "gray";
-		else if (horse.getHorseTexture().contains("hdb"))
+		else if (horseVariant % 256 == 6)
 			color = "dark_brown";
 		else {
 			MobHeads.LOGGER.warn("Could not find horse's color");
