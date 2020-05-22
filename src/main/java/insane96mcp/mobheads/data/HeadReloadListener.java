@@ -54,8 +54,6 @@ public class HeadReloadListener extends JsonReloadListener {
 			}
 		}
 
-		//ModTabs.HEADS.fill(NonNullList.create());
-
 		MobHeads.LOGGER.info("{} Heads loaded!", mobHeads.size());
 	}
 }
