@@ -10,6 +10,5 @@ public class FMLEventMod {
 	@SubscribeEvent
 	public static void setup(final FMLCommonSetupEvent event)
 	{
-
 	}
 }

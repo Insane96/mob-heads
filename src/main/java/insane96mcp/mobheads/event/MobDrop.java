@@ -3,6 +3,8 @@ package insane96mcp.mobheads.event;
 import insane96mcp.mobheads.MobHeads;
 import insane96mcp.mobheads.data.HeadReloadListener;
 import insane96mcp.mobheads.data.MobHead;
+import insane96mcp.mobheads.setup.ModConfig;
+import insane96mcp.mobheads.setup.Strings;
 import insane96mcp.mobheads.setup.Utils;
 import net.minecraft.entity.Entity;
 import net.minecraft.entity.LivingEntity;
@@ -36,6 +38,12 @@ public class MobDrop {
 		}
 
 		LivingEntity entity = event.getEntityLiving();
+		CompoundNBT entityNBT = entity.getPersistentData();
+		if (entityNBT.getBoolean(Strings.NBTTags.SPAWNED_FROM_SPANWER) && ModConfig.COMMON.mobsFromSpawnersDropNoHead.get() == ModConfig.HeadsFromSpawners.NONE)
+			return;
+		else if (entityNBT.getBoolean(Strings.NBTTags.SPAWNED_FROM_SPANWER) && ModConfig.COMMON.mobsFromSpawnersDropNoHead.get() == ModConfig.HeadsFromSpawners.CREEPER_ONLY && !(trueSource instanceof CreeperEntity))
+			return;
+
 		ResourceLocation mobId = entity.getType().getRegistryName();
 		for (MobHead head : HeadReloadListener.INSTANCE.getMobHeads()) {
 			if (mobId == null)
@@ -47,7 +55,6 @@ public class MobDrop {
 
 			boolean nbtMatches = true;
 			if (!head.nbt.isEmpty()) {
-				CompoundNBT entityNBT = entity.getPersistentData();
 				entity.writeAdditional(entityNBT);
 				nbtMatches = NBTUtil.areNBTEquals(head.nbt, entityNBT, true);
 			}
