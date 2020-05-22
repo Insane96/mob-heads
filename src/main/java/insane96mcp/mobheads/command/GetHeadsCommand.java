@@ -6,13 +6,13 @@ import net.minecraft.block.BlockState;
 import net.minecraft.block.Blocks;
 import net.minecraft.command.CommandSource;
 import net.minecraft.command.Commands;
-import net.minecraft.tileentity.ChestTileEntity;
+import net.minecraft.tileentity.TileEntity;
 import net.minecraft.util.ResourceLocation;
 import net.minecraft.util.math.BlockPos;
 import net.minecraftforge.items.CapabilityItemHandler;
 
-import java.util.SortedSet;
 import java.util.TreeSet;
+import java.util.concurrent.atomic.AtomicInteger;
 
 public class GetHeadsCommand {
 
@@ -30,20 +30,29 @@ public class GetHeadsCommand {
 
 	private static int summonChests(CommandSource source) {
 		BlockState chest = Blocks.CHEST.getDefaultState();
-		ChestTileEntity chestTE = new ChestTileEntity();
-		chestTE.getCapability(CapabilityItemHandler.ITEM_HANDLER_CAPABILITY, null)
-			.ifPresent(itemHandler -> {
-				int slot = 0;
-				SortedSet<ResourceLocation> keys = new TreeSet<>(HeadReloadListener.INSTANCE.mobHeads.keySet());
-				for (ResourceLocation key : keys){
-					itemHandler.insertItem(slot++, HeadReloadListener.INSTANCE.mobHeads.get(key).getStack(),false);
-					if (slot > itemHandler.getSlots())
-						slot = 0;
-				}
-			});
 
-		source.getWorld().setBlockState(new BlockPos(source.getPos()), chest, 2);
-		source.getWorld().setTileEntity(new BlockPos(source.getPos()), chestTE);
+		int chestsRequired = (int)Math.ceil(HeadReloadListener.INSTANCE.mobHeads.size() / 27d);
+		ResourceLocation[] keys = new ResourceLocation[HeadReloadListener.INSTANCE.mobHeads.size()];
+		keys = new TreeSet<>(HeadReloadListener.INSTANCE.mobHeads.keySet()).toArray(keys);
+		AtomicInteger headCount = new AtomicInteger(0);
+
+		for (int i = chestsRequired - 1; i >= 0; i--) {
+			source.getWorld().setBlockState(new BlockPos(source.getPos().add(0, i, 0)), chest, 2);
+
+			TileEntity chestTE = source.getWorld().getTileEntity(new BlockPos(source.getPos().add(0, i, 0)));
+			ResourceLocation[] finalKeys = keys;
+			chestTE.getCapability(CapabilityItemHandler.ITEM_HANDLER_CAPABILITY, null)
+					.ifPresent(itemHandler -> {
+						int slot = 0;
+						do {
+							itemHandler.insertItem(slot++, HeadReloadListener.INSTANCE.mobHeads.get(finalKeys[headCount.getAndIncrement()]).getStack(),false);
+
+							if (slot >= itemHandler.getSlots())
+								break;
+						} while(headCount.get() < HeadReloadListener.INSTANCE.mobHeads.size());
+					});
+		}
+
 
 		return 1;
 	}
