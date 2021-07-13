@@ -29,11 +29,11 @@ public class MHCreativeTabs {
 
 		@Override
 		public void fillItemList(NonNullList<ItemStack> items) {
-			super.fillItemList(items);
 			SortedSet<ResourceLocation> keys = new TreeSet<>(HeadReloadListener.INSTANCE.mobHeads.keySet());
 			for (ResourceLocation key : keys){
 				items.add(HeadReloadListener.INSTANCE.mobHeads.get(key).getStack());
 			}
+			super.fillItemList(items);
 		}
 	};
 }

@@ -1,6 +1,7 @@
 package insane96mcp.mobheads.command;
 
 import com.mojang.brigadier.CommandDispatcher;
+import insane96mcp.mobheads.MobHeads;
 import insane96mcp.mobheads.data.HeadReloadListener;
 import net.minecraft.block.BlockState;
 import net.minecraft.block.Blocks;
@@ -22,7 +23,7 @@ public class GetHeadsCommand {
 
 	public static void register(CommandDispatcher<CommandSource> dispatcher) {
 		dispatcher.register(
-				Commands.literal("getheads")
+				Commands.literal(MobHeads.RESOURCE_PREFIX + "getHeads")
 						.requires(source -> source.hasPermission(2))
 						.executes(context -> summonChests(context.getSource()))
 		);

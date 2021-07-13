@@ -7,11 +7,9 @@ import com.google.gson.GsonBuilder;
 import com.google.gson.JsonElement;
 import com.google.gson.JsonParseException;
 import insane96mcp.mobheads.MobHeads;
-import insane96mcp.mobheads.setup.MHCreativeTabs;
 import net.minecraft.client.resources.JsonReloadListener;
 import net.minecraft.profiler.IProfiler;
 import net.minecraft.resources.IResourceManager;
-import net.minecraft.util.NonNullList;
 import net.minecraft.util.ResourceLocation;
 
 import java.util.Map;
@@ -42,13 +40,12 @@ public class HeadReloadListener extends JsonReloadListener {
 			try {
 				MobHead head = MobHead.deserialize(json);
 				mobHeads.put(name, head);
-			} catch (IllegalArgumentException | JsonParseException e) {
+			}
+			catch (IllegalArgumentException | JsonParseException e) {
 				MobHeads.LOGGER.warn("Head '{}' failed to parse. This is most likely caused by incorrectly specified JSON.", entry.getKey());
 				MobHeads.LOGGER.warn("Error: ", e);
 			}
 		}
-
-		MHCreativeTabs.HEADS.fillItemList(NonNullList.create());
 
 		MobHeads.LOGGER.info("{} Heads loaded!", mobHeads.size());
 	}
