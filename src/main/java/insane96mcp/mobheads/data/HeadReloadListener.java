@@ -4,7 +4,7 @@ import com.google.common.collect.BiMap;
 import com.google.common.collect.HashBiMap;
 import com.google.gson.Gson;
 import com.google.gson.GsonBuilder;
-import com.google.gson.JsonObject;
+import com.google.gson.JsonElement;
 import com.google.gson.JsonParseException;
 import insane96mcp.mobheads.MobHeads;
 import net.minecraft.client.resources.JsonReloadListener;
@@ -27,24 +27,14 @@ public class HeadReloadListener extends JsonReloadListener {
 		this.mobHeads = HashBiMap.create();
 	}
 
-	static {
-		INSTANCE = new HeadReloadListener();
-	}
-
-	public final BiMap<ResourceLocation, MobHead> mobHeads;
-
-	public Set<MobHead> getMobHeads() {
-		return mobHeads.values();
-	}
-
 	@Override
-	protected void apply(Map<ResourceLocation, JsonObject> objectIn, IResourceManager resourceManagerIn, IProfiler profilerIn) {
-		for (Map.Entry<ResourceLocation, JsonObject> entry : objectIn.entrySet()) {
+	protected void apply(Map<ResourceLocation, JsonElement> map, IResourceManager resourceManager, IProfiler profiler) {
+		for (Map.Entry<ResourceLocation, JsonElement> entry : map.entrySet()) {
 			ResourceLocation name = entry.getKey();
 			String[] split = name.getPath().split("/");
 			if (split[split.length - 1].startsWith("_"))
 				continue;
-			JsonObject json = entry.getValue();
+			JsonElement json = entry.getValue();
 			try {
 				MobHead head = MobHead.deserialize(json);
 				mobHeads.put(name, head);
@@ -55,5 +45,15 @@ public class HeadReloadListener extends JsonReloadListener {
 		}
 
 		MobHeads.LOGGER.info("{} Heads loaded!", mobHeads.size());
+	}
+
+	static {
+		INSTANCE = new HeadReloadListener();
+	}
+
+	public final BiMap<ResourceLocation, MobHead> mobHeads;
+
+	public Set<MobHead> getMobHeads() {
+		return mobHeads.values();
 	}
 }

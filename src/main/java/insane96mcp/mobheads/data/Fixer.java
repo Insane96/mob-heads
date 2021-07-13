@@ -1,12 +1,13 @@
 package insane96mcp.mobheads.data;
 
-import insane96mcp.mobheads.MobHeads;
+import net.minecraft.entity.passive.horse.CoatColors;
 import net.minecraft.entity.passive.horse.HorseEntity;
 import net.minecraft.nbt.CompoundNBT;
 import net.minecraftforge.event.entity.EntityJoinWorldEvent;
 
-public class Fixer {
+import java.util.Locale;
 
+public class Fixer {
 	//Adds a "color" nbt tag to horses that stores their color in a less numeric way
 	public static void fixHorseColorTag(EntityJoinWorldEvent event) {
 		if (!(event.getEntity() instanceof HorseEntity))
@@ -19,30 +20,27 @@ public class Fixer {
 		if (nbt.contains("color"))
 			return;
 
-		String color = "";
-
-		int horseVariant = horse.getHorseVariant();
-		if (horseVariant % 256 == 0)
+		CoatColors horseVariant = horse.getVariant();
+		String color = horseVariant.name().toLowerCase(Locale.ROOT);
+		/*if (horseVariant.equals(CoatColors.WHITE))
 			color = "white";
-		else if (horseVariant % 256 == 1)
+		else if (horseVariant.equals(CoatColors.CREAMY))
 			color = "creamy";
-		else if (horseVariant % 256 == 2)
+		else if (horseVariant.equals(CoatColors.CHESTNUT))
 			color = "chestnut";
-		else if (horseVariant % 256 == 3)
+		else if (horseVariant.equals(CoatColors.BROWN))
 			color = "brown";
-		else if (horseVariant % 256 == 4)
+		else if (horseVariant.equals(CoatColors.BLACK))
 			color = "black";
-		else if (horseVariant % 256 == 5)
+		else if (horseVariant.equals(CoatColors.GRAY))
 			color = "gray";
-		else if (horseVariant % 256 == 6)
+		else if (horseVariant.equals(CoatColors.DARKBROWN))
 			color = "dark_brown";
 		else {
 			MobHeads.LOGGER.warn("Could not find horse's color");
 			return;
-		}
+		}*/
 
 		nbt.putString("color", color);
 	}
-
-
 }

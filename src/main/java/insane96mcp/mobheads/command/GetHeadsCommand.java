@@ -23,13 +23,13 @@ public class GetHeadsCommand {
 	public static void register(CommandDispatcher<CommandSource> dispatcher) {
 		dispatcher.register(
 				Commands.literal("getheads")
-				.requires(source -> source.hasPermissionLevel(2))
-				.executes(context -> summonChests(context.getSource()))
+						.requires(source -> source.hasPermission(2))
+						.executes(context -> summonChests(context.getSource()))
 		);
 	}
 
 	private static int summonChests(CommandSource source) {
-		BlockState chest = Blocks.CHEST.getDefaultState();
+		BlockState chest = Blocks.CHEST.defaultBlockState();
 
 		int chestsRequired = (int)Math.ceil(HeadReloadListener.INSTANCE.mobHeads.size() / 27d);
 		ResourceLocation[] keys = new ResourceLocation[HeadReloadListener.INSTANCE.mobHeads.size()];
@@ -37,9 +37,9 @@ public class GetHeadsCommand {
 		AtomicInteger headCount = new AtomicInteger(0);
 
 		for (int i = chestsRequired - 1; i >= 0; i--) {
-			source.getWorld().setBlockState(new BlockPos(source.getPos().add(0, i, 0)), chest, 2);
+			source.getLevel().setBlock(new BlockPos(source.getPosition().add(0, i, 0)), chest, 2);
 
-			TileEntity chestTE = source.getWorld().getTileEntity(new BlockPos(source.getPos().add(0, i, 0)));
+			TileEntity chestTE = source.getLevel().getBlockEntity(new BlockPos(source.getPosition().add(0, i, 0)));
 			ResourceLocation[] finalKeys = keys;
 			chestTE.getCapability(CapabilityItemHandler.ITEM_HANDLER_CAPABILITY, null)
 					.ifPresent(itemHandler -> {

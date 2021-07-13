@@ -1,5 +1,6 @@
 package insane96mcp.mobheads.data;
 
+import com.google.gson.JsonElement;
 import com.google.gson.JsonObject;
 import com.google.gson.JsonParseException;
 import com.mojang.brigadier.exceptions.CommandSyntaxException;
@@ -43,39 +44,39 @@ public class MobHead {
 		this.lootingChance = lootingChance;
 	}
 
-	public static MobHead deserialize(JsonObject json) {
+	public static MobHead deserialize(JsonElement json) {
 		if (!json.isJsonObject())
 			throw new JsonParseException("MobHead must be a JSON Object");
 
 		JsonObject jsonObject = json.getAsJsonObject();
-		String m = JSONUtils.getString(jsonObject, "mob_id");
-		ResourceLocation mobId = ResourceLocation.tryCreate(m);
+		String m = JSONUtils.getAsString(jsonObject, "mob_id");
+		ResourceLocation mobId = ResourceLocation.tryParse(m);
 		if (mobId == null)
 			throw new JsonParseException("mob_id is not valid");
 
-		String n = JSONUtils.getString(jsonObject, "nbt", "{}");
+		String n = JSONUtils.getAsString(jsonObject, "nbt", "{}");
 		CompoundNBT nbt;
 		try {
-			nbt = JsonToNBT.getTagFromJson(n);
+			nbt = JsonToNBT.parseTag(n);
 		}
 		catch (CommandSyntaxException e) {
 			throw new JsonParseException("nbt could not be parsed\n" + e.toString());
 		}
 
-		String hId = JSONUtils.getString(jsonObject, "head_id", "NULL");
-		ResourceLocation headId = ResourceLocation.tryCreate(hId);
+		String hId = JSONUtils.getAsString(jsonObject, "head_id", "NULL");
+		ResourceLocation headId = ResourceLocation.tryParse(hId);
 
-		String head = JSONUtils.getString(jsonObject, "head", "");
+		String head = JSONUtils.getAsString(jsonObject, "head", "");
 
-		String u = JSONUtils.getString(jsonObject, "uuid", "");
+		String u = JSONUtils.getAsString(jsonObject, "uuid", "");
 		UUID uuid = null;
 		if (!u.equals(""))
 			uuid = UUID.fromString(u);
 
-		String headName = JSONUtils.getString(jsonObject, "head_name", "");
+		String headName = JSONUtils.getAsString(jsonObject, "head_name", "");
 
-		double chance = JSONUtils.getFloat(jsonObject, "chance");
-		double lootingChance = JSONUtils.getFloat(jsonObject, "looting_chance", 0f);
+		double chance = JSONUtils.getAsFloat(jsonObject, "chance");
+		double lootingChance = JSONUtils.getAsFloat(jsonObject, "looting_chance", 0f);
 
 		if (headId != null)
 			return new MobHead(mobId, nbt, headId, chance, lootingChance);
@@ -99,10 +100,10 @@ public class MobHead {
 			texture.putString("Value", this.head);
 			textures.add(0, texture);
 			properties.put("textures", textures);
-			skullOwner.putString("Id", this.uuid.toString());
+			skullOwner.putUUID("Id", this.uuid);
 			skullOwner.put("Properties", properties);
 			nbt.put("SkullOwner", skullOwner);
-			String stackName = new StringTextComponent(this.headName).getUnformattedComponentText();
+			String stackName = new StringTextComponent(this.headName).getContents();
 			CompoundNBT display = new CompoundNBT();
 			display.putString("Name", "{\"text\":\"" + stackName + "\", \"italic\": false}");
 			nbt.put("display", display);
