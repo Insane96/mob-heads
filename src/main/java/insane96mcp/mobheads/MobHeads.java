@@ -1,6 +1,5 @@
 package insane96mcp.mobheads;
 
-import insane96mcp.mobheads.command.GetHeadsCommand;
 import insane96mcp.mobheads.data.HeadReloadListener;
 import insane96mcp.mobheads.setup.MHConfig;
 import net.minecraftforge.common.MinecraftForge;
@@ -31,6 +30,6 @@ public class MobHeads
 
     @SubscribeEvent
     public void onServerStarting(RegisterCommandsEvent event) {
-        GetHeadsCommand.register(event.getDispatcher());
+        //GetHeadsCommand.register(event.getDispatcher());
     }
 }
