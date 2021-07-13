@@ -11,7 +11,6 @@ import net.minecraft.nbt.JsonToNBT;
 import net.minecraft.nbt.ListNBT;
 import net.minecraft.util.JSONUtils;
 import net.minecraft.util.ResourceLocation;
-import net.minecraft.util.text.StringTextComponent;
 import net.minecraftforge.registries.ForgeRegistries;
 
 import java.util.UUID;
@@ -103,7 +102,7 @@ public class MobHead {
 			skullOwner.putUUID("Id", this.uuid);
 			skullOwner.put("Properties", properties);
 			nbt.put("SkullOwner", skullOwner);
-			String stackName = new StringTextComponent(this.headName).getContents();
+			String stackName = this.headName;
 			CompoundNBT display = new CompoundNBT();
 			display.putString("Name", "{\"text\":\"" + stackName + "\", \"italic\": false}");
 			nbt.put("display", display);

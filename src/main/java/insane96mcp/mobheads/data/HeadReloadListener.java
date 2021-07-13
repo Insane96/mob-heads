@@ -7,9 +7,11 @@ import com.google.gson.GsonBuilder;
 import com.google.gson.JsonElement;
 import com.google.gson.JsonParseException;
 import insane96mcp.mobheads.MobHeads;
+import insane96mcp.mobheads.setup.MHCreativeTabs;
 import net.minecraft.client.resources.JsonReloadListener;
 import net.minecraft.profiler.IProfiler;
 import net.minecraft.resources.IResourceManager;
+import net.minecraft.util.NonNullList;
 import net.minecraft.util.ResourceLocation;
 
 import java.util.Map;
@@ -21,6 +23,8 @@ public class HeadReloadListener extends JsonReloadListener {
 	public static final Gson GSON = new GsonBuilder()
 			.disableHtmlEscaping()
 			.create();
+
+	public final BiMap<ResourceLocation, MobHead> mobHeads;
 
 	public HeadReloadListener() {
 		super(GSON, "mob_heads");
@@ -44,14 +48,14 @@ public class HeadReloadListener extends JsonReloadListener {
 			}
 		}
 
+		MHCreativeTabs.HEADS.fillItemList(NonNullList.create());
+
 		MobHeads.LOGGER.info("{} Heads loaded!", mobHeads.size());
 	}
 
 	static {
 		INSTANCE = new HeadReloadListener();
 	}
-
-	public final BiMap<ResourceLocation, MobHead> mobHeads;
 
 	public Set<MobHead> getMobHeads() {
 		return mobHeads.values();
