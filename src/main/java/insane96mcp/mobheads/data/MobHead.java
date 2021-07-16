@@ -21,7 +21,7 @@ import java.util.UUID;
 public class MobHead {
 	public ResourceLocation mobId;
 	public CompoundNBT nbt;
-	private ArrayList<Head> heads;
+	private final ArrayList<Head> heads = new ArrayList<>();
 
 	public MobHead(ResourceLocation mobId, CompoundNBT nbt) {
 		this.mobId = mobId;
@@ -95,7 +95,7 @@ public class MobHead {
 		return String.format("MobHead[mobId: %s, nbt: %s, heads: %s]", this.mobId, this.nbt, this.heads);
 	}
 
-	public static class Head {
+	public abstract static class Head {
 		public double chance;
 		public double lootingChance;
 
@@ -103,6 +103,8 @@ public class MobHead {
 			this.chance = chance;
 			this.lootingChance = lootingChance;
 		}
+
+		public abstract ItemStack getStack();
 
 		public static class ItemHead extends Head {
 			public ResourceLocation headId;

@@ -37,14 +37,18 @@ public class HeadReloadListener extends JsonReloadListener {
 			if (split[split.length - 1].startsWith("_"))
 				continue;
 			JsonElement json = entry.getValue();
+			MobHead head = null;
 			try {
-				MobHead head = MobHead.deserialize(json);
-				mobHeads.put(name, head);
+				head = MobHead.deserialize(json);
 			}
 			catch (IllegalArgumentException | JsonParseException e) {
 				MobHeads.LOGGER.warn("Head '{}' failed to parse. This is most likely caused by incorrectly specified JSON.", entry.getKey());
 				MobHeads.LOGGER.warn("Error: ", e);
 			}
+			if (head == null)
+				continue;
+
+			mobHeads.put(name, head);
 		}
 
 		MobHeads.LOGGER.info("{} Heads loaded!", mobHeads.size());

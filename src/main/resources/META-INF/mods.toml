@@ -8,7 +8,7 @@ displayName="Mob Heads"
 #updateJSONURL="https://change.me.example.invalid/updates.json"
 #displayURL="https://change.me.to.your.mods.homepage.example.invalid/"
 #logoFile="examplemod.png"
-#credits="Thanks for this example mod goes to Java"
+credits="VanillaTweaks team for all the mob heads! https://vanillatweaks.net/"
 authors="Insane96"
 description='''
 This simple mod makes all mobs able to drop heads. Datapack driven!

@@ -78,22 +78,24 @@ public class BaseFeature extends Feature {
 			return;
 
 		ResourceLocation mobId = entity.getType().getRegistryName();
-		for (MobHead head : HeadReloadListener.INSTANCE.getMobHeads()) {
+		for (MobHead mobHead : HeadReloadListener.INSTANCE.getMobHeads()) {
 			if (mobId == null)
 				throw new NullPointerException("killed Mob's ID is null ... somehow");
-			if (!mobId.equals(head.mobId))
+			if (!mobId.equals(mobHead.mobId))
 				continue;
 			World world = entity.level;
 			Random rand = world.random;
 
 			boolean nbtMatches = true;
-			if (!head.nbt.isEmpty()) {
+			if (!mobHead.nbt.isEmpty()) {
 				entity.addAdditionalSaveData(entityNBT);
-				nbtMatches = NBTUtil.compareNbt(head.nbt, entityNBT, true);
+				nbtMatches = NBTUtil.compareNbt(mobHead.nbt, entityNBT, true);
 			}
 
 			if (!nbtMatches)
 				continue;
+
+			MobHead.Head head = mobHead.getRandomHead(entity.getRandom());
 
 			float chance = (float) (head.chance + (head.lootingChance * event.getLootingLevel()));
 			if (trueSource instanceof CreeperEntity) {
@@ -129,35 +131,38 @@ public class BaseFeature extends Feature {
 			return;
 
 		World world = event.getPlayer().level;
+
+		if (world.isClientSide)
+			return;
+
 		SkullTileEntity skullTileEntity = (SkullTileEntity) world.getBlockEntity(event.getPos());
 		CompoundNBT nbt = new CompoundNBT();
 		skullTileEntity.save(nbt);
 		CompoundNBT owner = nbt.getCompound("SkullOwner");
 		UUID headUUID = owner.getUUID("Id");
 
-		boolean isDataDrivenHead = false;
+		boolean isModHead = false;
 
-		if (!world.isClientSide) {
-			for (MobHead mobHead : HeadReloadListener.INSTANCE.getMobHeads()) {
-				if (mobHead.uuid == null)
+		for (MobHead mobHead : HeadReloadListener.INSTANCE.getMobHeads()) {
+			for (MobHead.Head head : mobHead.getHeads()) {
+				if (!(head instanceof MobHead.Head.NBTHead))
 					continue;
-				if (mobHead.uuid.equals(headUUID)) {
-					ItemStack headStack = mobHead.getStack();
+
+				if (((MobHead.Head.NBTHead) head).uuid.equals(headUUID)) {
+					ItemStack headStack = head.getStack();
 					ItemEntity itemEntity = new ItemEntity(world, event.getPos().getX() + .5, event.getPos().getY() + .5, event.getPos().getZ() + .5, headStack);
 					itemEntity.setDefaultPickUpDelay();
 					world.addFreshEntity(itemEntity);
-					isDataDrivenHead = true;
+					isModHead = true;
 					break;
 				}
 			}
 		}
 
-		if (!isDataDrivenHead)
+		if (!isModHead)
 			return;
 
 		world.destroyBlock(event.getPos(), false, event.getPlayer());
-		//world.levelEvent(event.getPlayer(), 2001, event.getPos(), SkullBlock.getId(event.getState()));
-		//world.setBlock(event.getPos(), Blocks.AIR.defaultBlockState(), 3);
 	}
 
 	public static boolean canCauseSkullDrop(CreeperEntity creeper, LivingEntity killed) {

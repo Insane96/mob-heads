@@ -2,6 +2,7 @@ package insane96mcp.mobheads;
 
 import insane96mcp.mobheads.data.HeadReloadListener;
 import insane96mcp.mobheads.setup.MHConfig;
+import insane96mcp.mobheads.setup.MHCreativeTabs;
 import net.minecraftforge.common.MinecraftForge;
 import net.minecraftforge.event.AddReloadListenerEvent;
 import net.minecraftforge.event.RegisterCommandsEvent;
@@ -21,6 +22,8 @@ public class MobHeads
     public MobHeads() {
         ModLoadingContext.get().registerConfig(net.minecraftforge.fml.config.ModConfig.Type.COMMON, MHConfig.COMMON_SPEC);
         MinecraftForge.EVENT_BUS.register(this);
+
+        MHCreativeTabs.init();
     }
 
     @SubscribeEvent

@@ -7,10 +7,7 @@ import net.minecraft.block.BlockState;
 import net.minecraft.block.Blocks;
 import net.minecraft.command.CommandSource;
 import net.minecraft.command.Commands;
-import net.minecraft.tileentity.TileEntity;
 import net.minecraft.util.ResourceLocation;
-import net.minecraft.util.math.BlockPos;
-import net.minecraftforge.items.CapabilityItemHandler;
 
 import java.util.TreeSet;
 import java.util.concurrent.atomic.AtomicInteger;
@@ -37,7 +34,7 @@ public class GetHeadsCommand {
 		keys = new TreeSet<>(HeadReloadListener.INSTANCE.mobHeads.keySet()).toArray(keys);
 		AtomicInteger headCount = new AtomicInteger(0);
 
-		for (int i = chestsRequired - 1; i >= 0; i--) {
+		/*for (int i = chestsRequired - 1; i >= 0; i--) {
 			source.getLevel().setBlock(new BlockPos(source.getPosition().add(0, i, 0)), chest, 2);
 
 			TileEntity chestTE = source.getLevel().getBlockEntity(new BlockPos(source.getPosition().add(0, i, 0)));
@@ -52,7 +49,7 @@ public class GetHeadsCommand {
 								break;
 						} while(headCount.get() < HeadReloadListener.INSTANCE.mobHeads.size());
 					});
-		}
+		}*/
 
 
 		return 1;
