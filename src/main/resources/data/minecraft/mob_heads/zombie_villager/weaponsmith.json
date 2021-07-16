@@ -1,0 +1,13 @@
+{
+	"mob_id": "minecraft:zombie_villager",
+	"nbt": "{VillagerData:{profession:\"minecraft:weaponsmith\"}}",
+	"heads": [
+		{
+			"head_texture": "eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvNDM3MDg5NGI1Y2MzMDVkODdhYTA4YzNiNGIwODU4N2RiNjhmZjI5ZTdhM2VmMzU0Y2FkNmFiY2E1MGU1NTI4YiJ9fX0=",
+			"uuid": "073659c8-0b45-42f3-a596-d4a8615d410d",
+			"head_name": "Zombie Weaponsmith Head",
+			"chance": 0.5,
+			"looting_chance": 0.02
+		}
+	]
+}

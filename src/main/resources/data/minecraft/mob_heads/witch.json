@@ -1,0 +1,12 @@
+{
+	"mob_id": "minecraft:witch",
+	"heads": [
+		{
+			"head_texture": "eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvYTUyMGYxMmM2M2M3OTEyMTg2YzRiZTRlMzBjMzNjNWFjYWVjMGRiMGI2YWJkODM2ZDUxN2Q3NGE2MjI3NWQ0YiJ9fX0=",
+			"uuid": "651b50f4-798b-4dd6-a89f-269787f4affb",
+			"head_name": "Witch Head",
+			"chance": 0.005,
+			"looting_chance": 0.001
+		}
+	]
+}

@@ -1,6 +1,0 @@
-{
-	"mob_id": "minecraft:zombie",
-	"head_id": "minecraft:zombie_head",
-	"chance": 0.0025,
-	"looting_chance": 0.001
-}

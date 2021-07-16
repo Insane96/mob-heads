@@ -1,0 +1,13 @@
+{
+    "mob_id": "minecraft:zombie_villager",
+	"nbt": "{VillagerData:{profession:\"minecraft:butcher\"}}",
+    "heads": [
+        {
+            "head_texture": "eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvOWNjZThkNmNlNDEyNGNlYzNlODRhODUyZTcwZjUwMjkzZjI0NGRkYzllZTg1NzhmN2Q2ZDg5MjllMTZiYWQ2OSJ9fX0=",
+            "uuid": "c57087e7-a526-461c-9843-07739b2605b2",
+            "head_name": "Zombie Butcher Head",
+            "chance": 0.5,
+            "looting_chance": 0.02
+        }
+    ]
+}

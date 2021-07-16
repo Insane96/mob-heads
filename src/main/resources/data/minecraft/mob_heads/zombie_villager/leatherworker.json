@@ -1,0 +1,13 @@
+{
+    "mob_id": "minecraft:zombie_villager",
+	"nbt": "{VillagerData:{profession:\"minecraft:leatherworker\"}}",
+    "heads": [
+        {
+            "head_texture": "eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvZmI1NTJjOTBmMjEyZTg1NWQxMjI1NWQ1Y2Q2MmVkMzhiOWNkN2UzMGU3M2YwZWE3NzlkMTc2NDMzMGU2OTI2NCJ9fX0=",
+            "uuid": "10961052-1016-4cfd-badb-a8d15b8b5347",
+            "head_name": "Zombie Leatherworker Head",
+            "chance": 0.5,
+            "looting_chance": 0.02
+        }
+    ]
+}
