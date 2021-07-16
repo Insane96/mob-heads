@@ -1,5 +1,6 @@
 package insane96mcp.mobheads.data;
 
+import com.google.gson.JsonArray;
 import com.google.gson.JsonElement;
 import com.google.gson.JsonObject;
 import com.google.gson.JsonParseException;
@@ -13,41 +14,37 @@ import net.minecraft.util.JSONUtils;
 import net.minecraft.util.ResourceLocation;
 import net.minecraftforge.registries.ForgeRegistries;
 
+import java.util.ArrayList;
+import java.util.Random;
 import java.util.UUID;
 
 public class MobHead {
 	public ResourceLocation mobId;
 	public CompoundNBT nbt;
-	public String head;
-	public UUID uuid;
-	public String headName;
-	public ResourceLocation headId;
-	public double chance;
-	public double lootingChance;
+	private ArrayList<Head> heads;
 
-	public MobHead(ResourceLocation mobId, CompoundNBT nbt, String head, UUID uuid, String headName, double chance, double lootingChance) {
+	public MobHead(ResourceLocation mobId, CompoundNBT nbt) {
 		this.mobId = mobId;
 		this.nbt = nbt;
-		this.head = head;
-		this.uuid = uuid;
-		this.headName = headName;
-		this.chance = chance;
-		this.lootingChance = lootingChance;
 	}
 
-	public MobHead(ResourceLocation mobId, CompoundNBT nbt, ResourceLocation headId, double chance, double lootingChance) {
-		this.mobId = mobId;
-		this.nbt = nbt;
-		this.headId = headId;
-		this.chance = chance;
-		this.lootingChance = lootingChance;
+	public ArrayList<Head> getHeads() {
+		return this.heads;
 	}
 
-	public static MobHead deserialize(JsonElement json) {
-		if (!json.isJsonObject())
+	public Head getRandomHead(Random random) {
+		return this.heads.get(random.nextInt(this.heads.size()));
+	}
+
+	public void addHead(Head head) {
+		this.heads.add(head);
+	}
+
+	public static MobHead deserialize(JsonElement jsonElement) {
+		if (!jsonElement.isJsonObject())
 			throw new JsonParseException("MobHead must be a JSON Object");
 
-		JsonObject jsonObject = json.getAsJsonObject();
+		JsonObject jsonObject = jsonElement.getAsJsonObject();
 		String m = JSONUtils.getAsString(jsonObject, "mob_id");
 		ResourceLocation mobId = ResourceLocation.tryParse(m);
 		if (mobId == null)
@@ -59,60 +56,109 @@ public class MobHead {
 			nbt = JsonToNBT.parseTag(n);
 		}
 		catch (CommandSyntaxException e) {
-			throw new JsonParseException("nbt could not be parsed\n" + e.toString());
+			throw new JsonParseException("nbt could not be parsed\n" + e);
 		}
 
-		String hId = JSONUtils.getAsString(jsonObject, "head_id", "NULL");
-		ResourceLocation headId = ResourceLocation.tryParse(hId);
+		MobHead mobHead = new MobHead(mobId, nbt);
 
-		String head = JSONUtils.getAsString(jsonObject, "head", "");
+		JsonArray headsJSON = JSONUtils.getAsJsonArray(jsonObject, "heads");
+		for (JsonElement headElement : headsJSON) {
+			JsonObject headJSON = headElement.getAsJsonObject();
+			String hId = JSONUtils.getAsString(headJSON, "head_id", "NULL");
+			ResourceLocation headId = ResourceLocation.tryParse(hId);
 
-		String u = JSONUtils.getAsString(jsonObject, "uuid", "");
-		UUID uuid = null;
-		if (!u.equals(""))
-			uuid = UUID.fromString(u);
+			String headTexture = JSONUtils.getAsString(headJSON, "head_texture", "");
 
-		String headName = JSONUtils.getAsString(jsonObject, "head_name", "");
+			String u = JSONUtils.getAsString(headJSON, "uuid", "");
+			UUID uuid = null;
+			if (!u.equals(""))
+				uuid = UUID.fromString(u);
 
-		double chance = JSONUtils.getAsFloat(jsonObject, "chance");
-		double lootingChance = JSONUtils.getAsFloat(jsonObject, "looting_chance", 0f);
+			String headName = JSONUtils.getAsString(headJSON, "head_name", "");
 
-		if (headId != null)
-			return new MobHead(mobId, nbt, headId, chance, lootingChance);
-		else if (!head.equals("") && uuid != null && !headName.equals(""))
-			return new MobHead(mobId, nbt, head, uuid, headName, chance, lootingChance);
-		else
-			throw new JsonParseException("head_id and head, uuid, head_name are missing");
-	}
+			double chance = JSONUtils.getAsFloat(headJSON, "chance");
+			double lootingChance = JSONUtils.getAsFloat(headJSON, "looting_chance", 0f);
 
-	public ItemStack getStack() {
-		if (headId != null){
-			return new ItemStack(ForgeRegistries.ITEMS.getValue(headId), 1);
+			if (headId != null)
+				mobHead.addHead(new Head.ItemHead(headId, chance, lootingChance));
+			else if (!headTexture.equals("") && uuid != null && !headName.equals(""))
+				mobHead.addHead(new Head.NBTHead(uuid, headName, headTexture, chance, lootingChance));
+			else
+				throw new JsonParseException("head_id and head_texture, uuid, head_name are missing");
 		}
-		else {
-			ItemStack headStack = new ItemStack(Blocks.PLAYER_HEAD, 1);
-			CompoundNBT nbt = new CompoundNBT();
-			CompoundNBT skullOwner = new CompoundNBT();
-			CompoundNBT properties = new CompoundNBT();
-			ListNBT textures = new ListNBT();
-			CompoundNBT texture = new CompoundNBT();
-			texture.putString("Value", this.head);
-			textures.add(0, texture);
-			properties.put("textures", textures);
-			skullOwner.putUUID("Id", this.uuid);
-			skullOwner.put("Properties", properties);
-			nbt.put("SkullOwner", skullOwner);
-			String stackName = this.headName;
-			CompoundNBT display = new CompoundNBT();
-			display.putString("Name", "{\"text\":\"" + stackName + "\", \"italic\": false}");
-			nbt.put("display", display);
-			headStack.setTag(nbt);
-			return headStack;
-		}
+
+		return mobHead;
 	}
 
 	@Override
 	public String toString() {
-		return String.format("Head[mob_id: %s, nbt: %s, head: %s, uuid: %s, head_name: %s, head_id: %s, chance: %f, looting_chance: %f]", this.mobId, this.nbt, this.head, this.uuid, this.headName, this.headId, this.chance, this.lootingChance);
+		return String.format("MobHead[mobId: %s, nbt: %s, heads: %s]", this.mobId, this.nbt, this.heads);
+	}
+
+	public static class Head {
+		public double chance;
+		public double lootingChance;
+
+		protected Head(double chance, double lootingChance) {
+			this.chance = chance;
+			this.lootingChance = lootingChance;
+		}
+
+		public static class ItemHead extends Head {
+			public ResourceLocation headId;
+
+			public ItemHead(ResourceLocation headId, double chance, double lootingChance) {
+				super(chance, lootingChance);
+				this.headId = headId;
+			}
+
+			public ItemStack getStack() {
+				return new ItemStack(ForgeRegistries.ITEMS.getValue(headId), 1);
+			}
+
+			@Override
+			public String toString() {
+				return String.format("ItemHead[headId: %s, chance: %.4f, lootingChance: %.4f]", this.headId, this.chance, this.lootingChance);
+			}
+		}
+
+		public static class NBTHead extends Head {
+			public UUID uuid;
+			public String headName;
+			public String headTexture;
+
+			public NBTHead(UUID uuid, String headName, String headTexture, double chance, double lootingChance) {
+				super(chance, lootingChance);
+				this.uuid = uuid;
+				this.headName = headName;
+				this.headTexture = headTexture;
+			}
+
+			public ItemStack getStack() {
+				ItemStack headStack = new ItemStack(Blocks.PLAYER_HEAD, 1);
+				CompoundNBT nbt = new CompoundNBT();
+				CompoundNBT skullOwner = new CompoundNBT();
+				CompoundNBT properties = new CompoundNBT();
+				ListNBT textures = new ListNBT();
+				CompoundNBT texture = new CompoundNBT();
+				texture.putString("Value", this.headTexture);
+				textures.add(0, texture);
+				properties.put("textures", textures);
+				skullOwner.putUUID("Id", this.uuid);
+				skullOwner.put("Properties", properties);
+				nbt.put("SkullOwner", skullOwner);
+				String stackName = this.headName;
+				CompoundNBT display = new CompoundNBT();
+				display.putString("Name", "{\"text\":\"" + stackName + "\", \"italic\": false}");
+				nbt.put("display", display);
+				headStack.setTag(nbt);
+				return headStack;
+			}
+
+			@Override
+			public String toString() {
+				return String.format("NBTHead[uuid: %s, headName: %s, headTexture: %s, chance: %.4f, lootingChance: %.4f]", this.uuid, this.headName, this.headTexture, this.chance, this.lootingChance);
+			}
+		}
 	}
 }
