@@ -1,0 +1,12 @@
+{
+	"mob_id": "minecraft:villager",
+	"nbt": "{VillagerData:{profession:\"minecraft:fisherman\"}}",
+	"heads": [
+		{
+			"head_texture": "eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvZDE4OWZiNGFjZDE1ZDczZmYyYTU4YTg4ZGYwNDY2YWQ5ZjRjMTU0YTIwMDhlNWM2MjY1ZDVjMmYwN2QzOTM3NiJ9fX0=",
+			"uuid": "e40b58ee-7503-477a-89b1-92ead471ae25",
+			"head_name": "Fisherman Villager Head",
+			"chance": 1
+		}
+	]
+}

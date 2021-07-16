@@ -1,9 +1,0 @@
-{
-    "mob_id": "minecraft:villager",
-	"nbt": "{VillagerData:{profession:\"minecraft:cartographer\"}}",
-    "head": "eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvOTQyNDhkZDA2ODAzMDVhZDczYjIxNGU4YzZiMDAwOTRlMjdhNGRkZDgwMzQ2NzY5MjFmOTA1MTMwYjg1OGJkYiJ9fX0=",
-    "uuid": "30eb7275-6727-4ca9-b9e4-20db6ff36406",
-    "head_name": "Cartographer Head",
-    "chance": 0.07,
-    "looting_chance": 0.01
-}

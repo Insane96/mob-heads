@@ -1,0 +1,12 @@
+{
+	"mob_id": "minecraft:tropical_fish",
+	"heads": [
+		{
+			"head_texture": "eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvMzRhMGM4NGRjM2MwOTBkZjdiYWZjNDM2N2E5ZmM2Yzg1MjBkYTJmNzNlZmZmYjgwZTkzNGQxMTg5ZWFkYWM0MSJ9fX0=",
+			"uuid": "6a0b5417-f676-4330-aeb2-a2c9b3631169",
+			"head_name": "Tropical Fish Head",
+			"chance": 0.1,
+			"looting_chance": 0.01
+		}
+	]
+}

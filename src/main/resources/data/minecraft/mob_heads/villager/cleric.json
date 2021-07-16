@@ -1,0 +1,12 @@
+{
+	"mob_id": "minecraft:villager",
+	"nbt": "{VillagerData:{profession:\"minecraft:cleric\"}}",
+	"heads": [
+		{
+			"head_texture": "eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvNWI5ZTU4MmUyZjliODlkNTU2ZTc5YzQ2OTdmNzA2YjFkZDQ5MjllY2FlM2MwN2VlOTBiZjFkNWJlMzE5YmY2ZiJ9fX0=",
+			"uuid": "d6f54816-46ae-4fe8-83a6-05ff0c49263d",
+			"head_name": "Cleric Villager Head",
+			"chance": 1
+		}
+	]
+}
