@@ -1,0 +1,13 @@
+{
+	"mob_id": "minecraft:cat",
+	"nbt": "{CatType:2}",
+	"heads": [
+		{
+			"head_texture": "eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvMjExM2RiZDNjNmEwNzhhMTdiNGVkYjc4Y2UwN2Q4MzZjMzhkYWNlNTAyN2Q0YjBhODNmZDYwZTdjYTdhMGZjYiJ9fX0=",
+			"uuid": "843ad940-9e59-415d-a5ef-fbd88481a2bb",
+			"head_name": "Red Cat Head",
+			"chance": 0.33,
+			"looting_chance": 0.02
+		}
+	]
+}

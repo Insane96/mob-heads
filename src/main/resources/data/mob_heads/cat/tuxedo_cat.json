@@ -1,9 +1,0 @@
-{
-    "mob_id": "minecraft:cat",
-	"nbt": "{CatType:1}",
-    "head_texture": " eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvNGZkMTBjOGU3NWY2NzM5OGM0NzU4N2QyNWZjMTQ2ZjMxMWMwNTNjYzVkMGFlYWI4NzkwYmNlMzZlZTg4ZjVmOCJ9fX0=",
-    "uuid": "0b62d6cc-c53e-440d-a8e6-5018e364bfee",
-    "head_name": "Tuxedo Cat Head",
-    "chance": 0.07,
-    "looting_chance": 0.01
-}

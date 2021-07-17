@@ -1,0 +1,13 @@
+{
+	"mob_id": "minecraft:bee",
+	"nbt": "{HasNectar:0b}",
+	"heads": [
+		{
+			"head_texture": "eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvZTQwMDIyM2YxZmE1NDc0MWQ0MjFkN2U4MDQ2NDA5ZDVmM2UxNWM3ZjQzNjRiMWI3Mzk5NDAyMDhmM2I2ODZkNCJ9fX0=",
+			"uuid": "b76837e4-4ae9-4565-9d26-6cb07049dfc1",
+			"head_name": "Angry Bee Head",
+			"chance": 0.2,
+			"looting_chance": 0.02
+		}
+	]
+}

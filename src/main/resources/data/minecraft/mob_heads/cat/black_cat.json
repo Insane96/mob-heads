@@ -1,0 +1,13 @@
+{
+	"mob_id": "minecraft:cat",
+	"nbt": "{CatType:10}",
+	"heads": [
+		{
+			"head_texture": "eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvMjJjMWU4MWZmMDNlODJhM2U3MWUwY2Q1ZmJlYzYwN2UxMTM2MTA4OWFhNDdmMjkwZDQ2YzhhMmMwNzQ2MGQ5MiJ9fX0=",
+			"uuid": "7ef6cbc8-fbcf-4297-8606-7b92de304ddc",
+			"head_name": "Black Cat Head",
+			"chance": 0.33,
+			"looting_chance": 0.02
+		}
+	]
+}

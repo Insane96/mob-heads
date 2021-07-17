@@ -1,0 +1,13 @@
+{
+	"mob_id": "minecraft:cat",
+	"nbt": "{CatType:7}",
+	"heads": [
+		{
+			"head_texture": "eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvZGM3YTQ1ZDI1ODg5ZTNmZGY3Nzk3Y2IyNThlMjZkNGU5NGY1YmMxM2VlZjAwNzk1ZGFmZWYyZTgzZTBhYjUxMSJ9fX0=",
+			"uuid": "d315e68b-ed5a-45b3-8c49-2edc0242f722",
+			"head_name": "Ragdoll Cat Head",
+			"chance": 0.33,
+			"looting_chance": 0.02
+		}
+	]
+}

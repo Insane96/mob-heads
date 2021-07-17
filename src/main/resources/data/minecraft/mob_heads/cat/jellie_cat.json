@@ -1,0 +1,13 @@
+{
+	"mob_id": "minecraft:cat",
+	"nbt": "{CatType:9}",
+	"heads": [
+		{
+			"head_texture": "eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvYTBkYjQxMzc2Y2E1N2RmMTBmY2IxNTM5ZTg2NjU0ZWVjZmQzNmQzZmU3NWU4MTc2ODg1ZTkzMTg1ZGYyODBhNSJ9fX0=",
+			"uuid": "d7992828-2f40-4542-b87c-412746994c55",
+			"head_name": "Jellie Cat Head",
+			"chance": 0.33,
+			"looting_chance": 0.02
+		}
+	]
+}

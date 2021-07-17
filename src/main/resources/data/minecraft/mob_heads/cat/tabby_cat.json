@@ -1,0 +1,13 @@
+{
+	"mob_id": "minecraft:cat",
+	"nbt": "{CatType:0}",
+	"heads": [
+		{
+			"head_texture": "eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvZGUyOGQzMGRiM2Y4YzNmZTUwY2E0ZjI2ZjMwNzVlMzZmMDAzYWU4MDI4MTM1YThjZDY5MmYyNGM5YTk4YWUxYiJ9fX0=",
+			"uuid": "4331a834-f92c-41b3-9c1b-6070ce6bbbc6",
+			"head_name": "Tabby Cat Head",
+			"chance": 0.33,
+			"looting_chance": 0.02
+		}
+	]
+}
