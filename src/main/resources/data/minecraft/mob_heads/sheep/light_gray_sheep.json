@@ -1,0 +1,13 @@
+{
+	"mob_id": "minecraft:sheep",
+	"nbt": "{Color:8b}",
+	"heads": [
+		{
+			"head_texture": "eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvMWQyZTJlOTNhMTQyYmZkNDNmMjQwZDM3ZGU4ZjliMDk3NmU3NmU2NWIyMjY1MTkwODI1OWU0NmRiNzcwZSJ9fX0=",
+			"uuid": "6119b2c7-bb3f-4efd-916a-df54d44b6781",
+			"head_name": "Light Gray Sheep Head",
+			"chance": 0.0175,
+			"looting_chance": 0.0025
+		}
+	]
+}

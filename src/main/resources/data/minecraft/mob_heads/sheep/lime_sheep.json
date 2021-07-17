@@ -1,0 +1,13 @@
+{
+	"mob_id": "minecraft:sheep",
+	"nbt": "{Color:5b}",
+	"heads": [
+		{
+			"head_texture": "eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvNmJlYWQwMzQyYWU4OWI4ZGZkM2Q3MTFhNjBhZGQ2NWUyYzJiZmVhOGQwYmQyNzRhNzU4N2RlZWQ3YTMxODkyZSJ9fX0=",
+			"uuid": "af3e655e-ea3c-482b-9464-c3fc261098b2",
+			"head_name": "Lime Sheep Head",
+			"chance": 0.0175,
+			"looting_chance": 0.0025
+		}
+	]
+}

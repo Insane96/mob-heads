@@ -1,0 +1,13 @@
+{
+	"mob_id": "minecraft:sheep",
+	"nbt": "{Color:13b}",
+	"heads": [
+		{
+			"head_texture": "eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvOWVhODg3ZWFlNGIwNzYzNmU5ZTJmOTA2NjA5YjAwYWI4ZDliODZiNzQ3MjhiODE5ZmY2ZjM3NjU4M2VhMTM5In19fQ==",
+			"uuid": "476b1d98-c6a4-44e6-81c3-55ee257ba7d9",
+			"head_name": "Green Sheep Head",
+			"chance": 0.0175,
+			"looting_chance": 0.0025
+		}
+	]
+}

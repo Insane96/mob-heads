@@ -1,0 +1,13 @@
+{
+	"mob_id": "minecraft:axolotl",
+	"nbt": "{Variant:0}",
+	"heads": [
+		{
+			"head_texture": "eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvNjY3ZTE1ZWFiNzMwNjRiNjY4MGQxZGI5OGJhNDQ1ZWQwOTE0YmEzNWE3OTk5OTdjMGRhMmIwM2ZmYzNhODgyNiJ9fX0=",
+			"uuid": "b2f4b381-60c9-43d4-b53e-2b53662102d2",
+			"head_name": "Lucy Axolotl Head",
+			"chance": 0.2,
+			"looting_chance": 0.01
+		}
+	]
+}

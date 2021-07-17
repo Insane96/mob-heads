@@ -1,9 +1,0 @@
-{
-    "mob_id": "minecraft:sheep",
-	"nbt": "{Color:2b}",
-    "head_texture": " eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvMTgzNjU2NWM3ODk3ZDQ5YTcxYmMxODk4NmQxZWE2NTYxMzIxYTBiYmY3MTFkNDFhNTZjZTNiYjJjMjE3ZTdhIn19fQ==",
-    "uuid": "1b4121e2-c059-4605-af12-8c12f399b996",
-    "head_name": "Magenta Sheep Head",
-    "chance": 0.02,
-    "looting_chance": 0.01
-}
