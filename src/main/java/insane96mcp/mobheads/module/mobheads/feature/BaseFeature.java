@@ -119,6 +119,7 @@ public class BaseFeature extends Feature {
 			ItemEntity itemEntity = new ItemEntity(entity.level, entity.getX(), entity.getY(), entity.getZ(), headStack);
 			itemEntity.setDefaultPickUpDelay();
 			event.getDrops().add(itemEntity);
+			break;
 		}
 	}
 
@@ -167,6 +168,9 @@ public class BaseFeature extends Feature {
 					break;
 				}
 			}
+
+			if (isModHead)
+				break;
 		}
 
 		if (!isModHead)
