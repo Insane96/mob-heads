@@ -1,0 +1,11 @@
+{
+	"mob_id": "minecraft:creeper",
+	"nbt": "{powered:0b}",
+	"heads": [
+		{
+			"head_id": "minecraft:creeper_head",
+			"chance": 0.005,
+			"looting_chance": 0.001
+		}
+	]
+}

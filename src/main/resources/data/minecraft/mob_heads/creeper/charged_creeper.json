@@ -1,0 +1,12 @@
+{
+	"mob_id": "minecraft:creeper",
+	"nbt": "{powered:1b}",
+	"heads": [
+		{
+			"head_texture": "eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvMzUxMWU0YTNkNWFkZDZhNTQ0OTlhYmFkMTBkNzk5ZDA2Y2U0NWNiYTllNTIwYWZkMjAwODYwOGE2Mjg4YjdlNyJ9fX0=",
+			"uuid": "45558db7-070c-4b97-ac7b-80e4462f1286",
+			"head_name": "Charged Creeper Head",
+			"chance": 1
+		}
+	]
+}
