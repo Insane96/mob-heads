@@ -1,0 +1,13 @@
+{
+	"mob_id": "minecraft:parrot",
+	"nbt": "{Variant:0}",
+	"heads": [
+		{
+			"head_texture": "eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvNDBhM2Q0N2Y1NGU3MWE1OGJmOGY1N2M1MjUzZmIyZDIxM2Y0ZjU1YmI3OTM0YTE5MTA0YmZiOTRlZGM3NmVhYSJ9fX0=",
+			"uuid": "437c10c1-81cb-452b-87b8-789a65dae92a",
+			"head_name": "Red Parrot Head",
+			"chance": 0.25,
+			"looting_chance": 0.02
+		}
+	]
+}

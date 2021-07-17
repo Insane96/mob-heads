@@ -1,0 +1,13 @@
+{
+	"mob_id": "minecraft:parrot",
+	"nbt": "{Variant:3}",
+	"heads": [
+		{
+			"head_texture": "eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvNzI2OGNlMzdiZTg1MDdlZDY3ZTNkNDBiNjE3ZTJkNzJmNjZmOWQyMGIxMDZlZmIwOGU2YmEwNDFmOWI5ZWYxMCJ9fX0=",
+			"uuid": "891c9d8e-9fe5-43cf-bd02-dcc70e888910",
+			"head_name": "Cyan Parrot Head",
+			"chance": 0.25,
+			"looting_chance": 0.02
+		}
+	]
+}

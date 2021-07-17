@@ -1,0 +1,13 @@
+{
+	"mob_id": "minecraft:parrot",
+	"nbt": "{Variant:4}",
+	"heads": [
+		{
+			"head_texture": "eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvNzFiZTcyM2FhMTczOTNkOTlkYWRkYzExOWM5OGIyYzc5YzU0YjM1ZGViZTA1YzcxMzhlZGViOGQwMjU2ZGM0NiJ9fX0=",
+			"uuid": "6da801e4-e9b8-45b8-9670-4e93c8f28bcb",
+			"head_name": "Gray Parrot Head",
+			"chance": 0.25,
+			"looting_chance": 0.02
+		}
+	]
+}

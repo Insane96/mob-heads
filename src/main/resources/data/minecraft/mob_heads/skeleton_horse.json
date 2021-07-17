@@ -1,0 +1,12 @@
+{
+	"mob_id": "minecraft:skeleton_horse",
+	"heads": [
+		{
+			"head_texture": "eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvNmUyMjY3MDViZDJhOWU3YmI4ZDZiMGY0ZGFhOTY5YjllMTJkNGFlNWM2NmRhNjkzYmI1ZjRhNGExZTZhYTI5NiJ9fX0=",
+			"uuid": "e09e8c93-9c3c-42c8-bc3f-831e77987d3d",
+			"head_name": "Zombie Horse Head",
+			"chance": 0.2,
+			"looting_chance": 0.05
+		}
+	]
+}

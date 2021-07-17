@@ -87,9 +87,10 @@ public class BaseFeature extends Feature {
 			return;
 
 		ResourceLocation mobId = entity.getType().getRegistryName();
+		if (mobId == null)
+			throw new NullPointerException("killed Mob's ID is null ... somehow");
+
 		for (MobHead mobHead : HeadReloadListener.INSTANCE.getMobHeads()) {
-			if (mobId == null)
-				throw new NullPointerException("killed Mob's ID is null ... somehow");
 			if (!mobId.equals(mobHead.mobId))
 				continue;
 			World world = entity.level;

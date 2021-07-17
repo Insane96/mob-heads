@@ -1,0 +1,13 @@
+{
+	"mob_id": "minecraft:panda",
+	"nbt": "{MainGene:\"weak\"}",
+	"heads": [
+		{
+			"head_texture": "eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvY2M1NmEzNTVmYmUwZTJmYmQyOGU4NWM0ZDgxNWZmYTVkMWY5ZDVmODc5OGRiYzI1OWZmODhjNGFkZGIyMDJhZSJ9fX0=",
+			"uuid": "3e8e915e-8631-4795-b138-f7a42fde7fa4",
+			"head_name": "Weak Panda Head",
+			"chance": 0.27,
+			"looting_chance": 0.004
+		}
+	]
+}

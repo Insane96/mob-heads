@@ -1,0 +1,13 @@
+{
+	"mob_id": "minecraft:rabbit",
+	"nbt": "{RabbitType:5}",
+	"heads": [
+		{
+			"head_texture": "eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvOTIzODUxOWZmMzk4MTViMTZjNDA2MjgyM2U0MzE2MWZmYWFjOTY4OTRmZTA4OGIwMThlNmEyNGMyNmUxODFlYyJ9fX0=",
+			"uuid": "1e78cf66-bbac-4d37-8ea9-4c2f8a49bbb4",
+			"head_name": "Salt And Pepper Rabbit Head",
+			"chance": 0.26,
+			"looting_chance": 0.05
+		}
+	]
+}

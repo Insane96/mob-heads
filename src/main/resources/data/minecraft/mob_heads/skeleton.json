@@ -1,0 +1,10 @@
+{
+	"mob_id": "minecraft:skeleton",
+	"heads": [
+		{
+			"head_id": "minecraft:skeleton_skull",
+			"chance": 0.0025,
+			"looting_chance": 0.001
+		}
+	]
+}

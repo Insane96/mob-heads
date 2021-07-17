@@ -1,0 +1,13 @@
+{
+	"mob_id": "minecraft:parrot",
+	"nbt": "{Variant:2}",
+	"heads": [
+		{
+			"head_texture": "eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvNmExZGMzMzExNTIzMmY4MDA4MjVjYWM5ZTNkOWVkMDNmYzE4YWU1NTNjMjViODA1OTUxMzAwMGM1OWUzNTRmZSJ9fX0=",
+			"uuid": "f92c36e2-c57f-4298-a3f3-3c88c91b35e0",
+			"head_name": "Green Parrot Head",
+			"chance": 0.25,
+			"looting_chance": 0.02
+		}
+	]
+}

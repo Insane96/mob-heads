@@ -1,0 +1,12 @@
+{
+	"mob_id": "minecraft:rabbit",
+	"nbt": "{RabbitType:99}",
+	"heads": [
+		{
+			"head_texture": "eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvNzFkZDc2NzkyOWVmMmZkMmQ0M2U4NmU4NzQ0YzRiMGQ4MTA4NTM0NzEyMDFmMmRmYTE4Zjk2YTY3ZGU1NmUyZiJ9fX0=",
+			"uuid": "450af01d-fde8-4281-ba16-2d34dc6924f5",
+			"head_name": "The Killer Bunny Head",
+			"chance": 1
+		}
+	]
+}

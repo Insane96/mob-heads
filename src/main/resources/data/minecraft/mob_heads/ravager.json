@@ -1,0 +1,12 @@
+{
+	"mob_id": "minecraft:ravager",
+	"heads": [
+		{
+			"head_texture": "eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvZWI0ZGIyOTg2MTQwZTI1MWUzMmU3MGVkMDhjOGEwODE3MjAzMTNjZTI1NzYzMmJlMWVmOTRhMDczNzM5NGRiIn19fQ==",
+			"uuid": "e5b9bbdd-cf5d-402d-aa4e-a11b58e01d97",
+			"head_name": "Ravager Head",
+			"chance": 0.25,
+			"looting_chance": 0.02
+		}
+	]
+}
