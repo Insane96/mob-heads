@@ -1,0 +1,9 @@
+{
+	"mob_id": "minecraft:ender_dragon",
+	"heads": [
+		{
+			"head_id": "minecraft:dragon_head",
+			"chance": 1
+		}
+	]
+}

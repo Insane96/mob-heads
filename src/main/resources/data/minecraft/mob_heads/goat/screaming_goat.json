@@ -1,0 +1,12 @@
+{
+	"mob_id": "minecraft:goat",
+	"nbt": "{IsScreamingGoat:1b}",
+	"heads": [
+		{
+			"head_texture": "eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvYmRhNDg1YWMyMzUxMjQyMDg5MWE1YWUxZThkZTk4OWYwOTFkODQ4ZDE1YTkwNjhkYTQ3MjBkMzE2ZmM0MzMwZiJ9fX0=",
+			"uuid": "1fe04c11-1470-4f58-95bb-cfb1213024b7",
+			"head_name": "Screaming Goat Head",
+			"chance": 1
+		}
+	]
+}

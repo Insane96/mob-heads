@@ -1,0 +1,12 @@
+{
+	"mob_id": "minecraft:magma_cube",
+	"heads": [
+		{
+			"head_texture": "eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvYjgxNzE4ZDQ5ODQ4NDdhNGFkM2VjMDgxYTRlYmZmZDE4Mzc0MzIzOWFlY2FiNjAzMjIxMzhhNzI2MDk4MTJjMyJ9fX0=",
+			"uuid": "7ea08915-57cb-462c-ae0e-2b386bd5c067",
+			"head_name": "Magma Cube Head",
+			"chance": 0.005,
+			"looting_chance": 0.001
+		}
+	]
+}

@@ -1,0 +1,12 @@
+{
+	"mob_id": "minecraft:endermite",
+	"heads": [
+		{
+			"head_texture": "eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvOGM2YjY1YzIyYjQ0NjViYTY3OTNiMjE5NWNkNTA4NGNlODNiODhkY2E2ZTU1ZWI5NDg0NTQwYWNkNzM1MmE1MCJ9fX0=",
+			"uuid": "60c45bd6-0608-4029-a53b-fd29af917dd0",
+			"head_name": "Endermite Head",
+			"chance": 0.1,
+			"looting_chance": 0.01
+		}
+	]
+}

@@ -1,0 +1,13 @@
+{
+	"mob_id": "minecraft:horse",
+	"nbt": "{color:\"chestnut\"}",
+	"heads": [
+		{
+			"head_texture": "eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvNmM4NzIwZDFmNTUyNjkzYjQwYTlhMzNhZmE0MWNlZjA2YWZkMTQyODMzYmVkOWZhNWI4ODdlODhmMDVmNDlmYSJ9fX0=",
+			"uuid": "aad9c45d-cd17-4350-9c9a-7215fd991713",
+			"head_name": "Chestnut Horse Head",
+			"chance": 0.27,
+			"looting_chance": 0.01
+		}
+	]
+}

@@ -1,0 +1,13 @@
+{
+	"mob_id": "minecraft:llama",
+	"nbt": "{Variant:3}",
+	"heads": [
+		{
+			"head_texture": "eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvY2YyNGU1NmZkOWZmZDcxMzNkYTZkMWYzZTJmNDU1OTUyYjFkYTQ2MjY4NmY3NTNjNTk3ZWU4MjI5OWEifX19",
+			"uuid": "742d52ee-70ec-49f6-b12c-a049d76af403",
+			"head_name": "Gray Llama Head",
+			"chance": 0.24,
+			"looting_chance": 0.02
+		}
+	]
+}

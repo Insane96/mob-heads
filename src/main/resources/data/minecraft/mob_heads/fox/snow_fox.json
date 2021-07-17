@@ -1,0 +1,13 @@
+{
+    "mob_id": "minecraft:fox",
+    "nbt": "{Type:\"snow\"}",
+    "heads": [
+        {
+            "head_texture": "eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvNDE0MzYzNzdlYjRjNGI0ZTM5ZmIwZTFlZDg4OTlmYjYxZWUxODE0YTkxNjliOGQwODcyOWVmMDFkYzg1ZDFiYSJ9fX0=",
+            "uuid": "b46c9ff7-78dd-405a-becf-9be62e38cc58",
+            "head_name": "Snow Fox Head",
+            "chance": 0.2,
+            "looting_chance": 0.004
+        }
+    ]
+}

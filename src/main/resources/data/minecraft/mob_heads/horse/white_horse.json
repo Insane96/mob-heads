@@ -1,0 +1,13 @@
+{
+	"mob_id": "minecraft:horse",
+	"nbt": "{color:\"white\"}",
+	"heads": [
+		{
+			"head_texture": "eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvYzdiYzYxNjA5NzMwZjJjYjAxMDI2OGZhYjA4MjFiZDQ3MzUyNjk5NzUwYTE1MDU5OWYyMWMzZmM0ZTkyNTkxYSJ9fX0=",
+			"uuid": "eacb7c5c-520a-478d-981a-eb0df2cfdf56",
+			"head_name": "White Horse Head",
+			"chance": 0.27,
+			"looting_chance": 0.01
+		}
+	]
+}

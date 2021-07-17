@@ -1,0 +1,13 @@
+{
+	"mob_id": "minecraft:llama",
+	"nbt": "{Variant:2}",
+	"heads": [
+		{
+			"head_texture": "eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvYzJiMWVjZmY3N2ZmZTNiNTAzYzMwYTU0OGViMjNhMWEwOGZhMjZmZDY3Y2RmZjM4OTg1NWQ3NDkyMTM2OCJ9fX0=",
+			"uuid": "ca9b271e-f675-4752-823c-695a8cb1118a",
+			"head_name": "Brown Llama Head",
+			"chance": 0.24,
+			"looting_chance": 0.02
+		}
+	]
+}

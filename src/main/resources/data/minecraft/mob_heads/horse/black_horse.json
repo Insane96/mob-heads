@@ -1,0 +1,13 @@
+{
+	"mob_id": "minecraft:horse",
+	"nbt": "{color:\"black\"}",
+	"heads": [
+		{
+			"head_texture": "eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvNjcyM2ZhNWJlNmFjMjI5MmE3MjIzMGY1ZmQ3YWI2NjM0OTNiZDhmN2U2NDgxNjQyNGRjNWJmMjRmMTMzODkwYyJ9fX0=",
+			"uuid": "1b0291c6-b254-4e22-bfd6-091408b7f91b",
+			"head_name": "Black Horse Head",
+			"chance": 0.27,
+			"looting_chance": 0.01
+		}
+	]
+}

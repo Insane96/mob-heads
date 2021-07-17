@@ -1,0 +1,13 @@
+{
+	"mob_id": "minecraft:mooshroom",
+	"nbt": "{type:\"brown\"}",
+	"heads": [
+		{
+			"head_texture": "eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvN2U2NDY2MzAyYTVhYjQzOThiNGU0NzczNDk4MDhlNWQ5NDAyZWEzYWQ4ZmM0MmUyNDQ2ZTRiZWQwYTVlZDVlIn19fQ==",
+			"uuid": "e9f82a36-166d-4ea0-b9da-3c4e061f9d03",
+			"head_name": "Brown Mooshroom Head",
+			"chance": 0.1,
+			"looting_chance": 0.001
+		}
+	]
+}
