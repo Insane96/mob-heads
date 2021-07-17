@@ -10,7 +10,7 @@ public class MHModule extends Module {
 	public BaseFeature base;
 
 	public MHModule() {
-		super(MHConfig.builder);
+		super(MHConfig.builder, true, false);
 		pushConfig(MHConfig.builder);
 		base = new BaseFeature(this);
 		MHConfig.builder.pop();

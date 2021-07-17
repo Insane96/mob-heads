@@ -15,7 +15,6 @@ import net.minecraft.entity.LivingEntity;
 import net.minecraft.entity.SpawnReason;
 import net.minecraft.entity.item.ItemEntity;
 import net.minecraft.entity.monster.CreeperEntity;
-import net.minecraft.entity.monster.ZombieEntity;
 import net.minecraft.entity.player.PlayerEntity;
 import net.minecraft.item.ItemStack;
 import net.minecraft.nbt.CompoundNBT;
@@ -43,8 +42,8 @@ public class BaseFeature extends Feature {
 	public boolean chargedCreeperOnly = false;
 
 	public BaseFeature(Module module) {
-		super(MHConfig.builder, module);
-		MHConfig.builder.comment(this.getDescription()).push(this.getName());
+		super(MHConfig.builder, module, true, false);
+		this.pushConfig(MHConfig.builder);
 		mobsFromSpawnersDropNoHeadConfig = MHConfig.builder
 				.comment("Set how mobs from spawners will behave when killed.\n" +
 						"NONE will make mobs spawned from spawners drop no head when killed (except for vanilla mobs when killed by charged creepers).\n" +
@@ -72,7 +71,7 @@ public class BaseFeature extends Feature {
 
 		if (trueSource instanceof CreeperEntity){
 			CreeperEntity creeper = (CreeperEntity) trueSource;
-			if (!canCauseSkullDrop(creeper, event.getEntityLiving()))
+			if (!creeper.canDropMobsSkull())
 				return;
 		}
 
@@ -177,11 +176,6 @@ public class BaseFeature extends Feature {
 			return;
 
 		world.destroyBlock(event.getPos(), false, event.getPlayer());
-	}
-
-	public static boolean canCauseSkullDrop(CreeperEntity creeper, LivingEntity killed) {
-		//Workaround since zombie subtypes (husks, etc) count towards dropped skulls even if they don't drop one ...
-		return creeper.isPowered() && ((creeper.droppedSkulls < 1) || (creeper.droppedSkulls < 2 && killed instanceof ZombieEntity && !killed.getType().getRegistryName().toString().equals("minecraft:zombie")));
 	}
 
 	public enum HeadsFromSpawners {

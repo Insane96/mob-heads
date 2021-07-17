@@ -30,6 +30,6 @@ This simple mod makes all mobs able to drop heads. Datapack driven!
 [[dependencies.mobheads]]
     modId = "insanelib"
     mandatory = true
-    versionRange = "[1.1.0,)"
+    versionRange = "[1.1.1,)"
     ordering = "NONE"
     side = "BOTH"
