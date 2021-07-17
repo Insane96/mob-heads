@@ -37,8 +37,10 @@ import java.util.UUID;
 public class BaseFeature extends Feature {
 
 	public ForgeConfigSpec.ConfigValue<HeadsFromSpawners> mobsFromSpawnersDropNoHeadConfig;
+	public ForgeConfigSpec.ConfigValue<Boolean> chargedCreeperOnlyConfig;
 
-	public HeadsFromSpawners mobsFromSpawnersDropNoHead;
+	public HeadsFromSpawners mobsFromSpawnersDropNoHead = HeadsFromSpawners.CREEPER_ONLY;
+	public boolean chargedCreeperOnly = false;
 
 	public BaseFeature(Module module) {
 		super(MHConfig.builder, module);
@@ -48,7 +50,10 @@ public class BaseFeature extends Feature {
 						"NONE will make mobs spawned from spawners drop no head when killed (except for vanilla mobs when killed by charged creepers).\n" +
 						"CREEPER_ONLY (by default) will make mobs from spawners drop their head only when killed by Charged Creepers.\n" +
 						"NO_CHANGE will make mobs from spawners drop heads like normal.")
-				.defineEnum("Mobs From Spawners Head Drop Behaviour", HeadsFromSpawners.CREEPER_ONLY);
+				.defineEnum("Mobs From Spawners Head Drop Behaviour", this.mobsFromSpawnersDropNoHead);
+		chargedCreeperOnlyConfig = MHConfig.builder
+				.comment("Set to true to make mobs drop their heads only via Charged creepers instead of having a percentage chance to drop it when killed.")
+				.define("Charged Creeper Only", this.chargedCreeperOnly);
 		MHConfig.builder.pop();
 	}
 
@@ -56,6 +61,7 @@ public class BaseFeature extends Feature {
 	public void loadConfig() {
 		super.loadConfig();
 		this.mobsFromSpawnersDropNoHead = this.mobsFromSpawnersDropNoHeadConfig.get();
+		this.chargedCreeperOnly = this.chargedCreeperOnlyConfig.get();
 	}
 
 	@SubscribeEvent
@@ -69,6 +75,9 @@ public class BaseFeature extends Feature {
 			if (!canCauseSkullDrop(creeper, event.getEntityLiving()))
 				return;
 		}
+
+		if (!(trueSource instanceof CreeperEntity) && this.chargedCreeperOnly)
+			return;
 
 		LivingEntity entity = event.getEntityLiving();
 		CompoundNBT entityNBT = entity.getPersistentData();

@@ -1,0 +1,12 @@
+{
+	"mob_id": "minecraft:slime",
+	"heads": [
+		{
+			"head_texture": "eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvYzA2NDI0ZWM3YTE5NmIxNWY5YWQ1NzMzYTM2YTZkMWYyZTZhMGQ0MmZmY2UxZTE1MDhmOTBmMzEyYWM0Y2FlZCJ9fX0=",
+			"uuid": "6934d6c5-f5c2-48cd-a9fe-7c89dc53c34b",
+			"head_name": "Slime Head",
+			"chance": 0.005,
+			"looting_chance": 0.001
+		}
+	]
+}

@@ -1,0 +1,12 @@
+{
+	"mob_id": "minecraft:snow_golem",
+	"heads": [
+		{
+			"head_texture": "eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvY2FhM2UxN2VmMWIyOWE0Yjg3ZmE0M2RlZTFkYjEyYzQxZmQzOWFhMzg3ZmExM2FmMmEwNzliNWIzNzhmZGU4YiJ9fX0=",
+			"uuid": "ca7828f0-222e-454b-a226-e7ec5e967c6f",
+			"head_name": "Snowman Head",
+			"chance": 0.05,
+			"looting_chance": 0.01
+		}
+	]
+}

@@ -1,0 +1,19 @@
+{
+    "mob_id": "minecraft:strider",
+    "heads": [
+        {
+            "head_texture": "eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvOWM0MGZhZDFjMTFkZTllNjQyMmI0MDU0MjZlOWI5NzkwN2YzNWJjZTM0NWUzNzU4NjA0ZDNlN2JlN2RmODg0In19fQ==",
+            "uuid": "402ed6ee-d0d2-41c5-bf76-0cbd697288c5",
+            "head_name": "Strider Head",
+            "chance": 0.1,
+            "looting_chance": 0.01
+        },
+        {
+            "head_texture": "eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvMjcxMzA4NWE1NzUyN2U0NTQ1OWMzOGZhYTdiYjkxY2FiYjM4MWRmMzFjZjJiZjc5ZDY3YTA3MTU2YjZjMjMwOSJ9fX0=",
+            "uuid": "873a46ab-01ad-421a-b4d8-6eb9618ff38d",
+            "head_name": "Freezing Strider Head",
+            "chance": 0.1,
+            "looting_chance": 0.01
+        }
+    ]
+}
