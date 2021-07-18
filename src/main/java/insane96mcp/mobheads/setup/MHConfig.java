@@ -1,10 +1,13 @@
 package insane96mcp.mobheads.setup;
 
+import insane96mcp.mobheads.MobHeads;
 import insane96mcp.mobheads.module.MHModules;
 import net.minecraftforge.common.ForgeConfigSpec;
 import net.minecraftforge.eventbus.api.SubscribeEvent;
+import net.minecraftforge.fml.common.Mod;
 import org.apache.commons.lang3.tuple.Pair;
 
+@Mod.EventBusSubscriber(modid = MobHeads.MOD_ID, bus = Mod.EventBusSubscriber.Bus.MOD)
 public class MHConfig {
 	public static final ForgeConfigSpec COMMON_SPEC;
 	public static final CommonConfig COMMON;
